@@ -25,7 +25,7 @@ defmodule PhoenixMetaTags.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix_html, "~> 2.10"},
+      {:phoenix_html, "~> 2.10 or ~> 3.0"},
       {:plug, "~> 1.7"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
