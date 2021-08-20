@@ -8,18 +8,30 @@ defmodule PhoenixMetaTags.TagView do
 
   # OK: override value if runtime tags has the same key, ex: `og:title` will override `title` when render og
 
-#  @config_read Application.get_all_env(:phoenix_meta_tags)
-#               |> Enum.into(%{})
-#               |> MapHelper.flatMap()
+  #  @config_read Application.get_all_env(:phoenix_meta_tags)
+  #               |> Enum.into(%{})
+  #               |> MapHelper.flatMap()
 
   defmacro __using__(_) do
     quote do
       alias PhoenixMetaTags.MapHelper
 
-      @default_tags ["title", "description", "image", "url",
-        "og:type", "og:url", "og:title", "og:description", "og:image",
-        "twitter:title", "twitter:card", "twitter:url", "twitter:description",  "twitter:image"]
-
+      @default_tags [
+        "title",
+        "description",
+        "image",
+        "url",
+        "og:type",
+        "og:url",
+        "og:title",
+        "og:description",
+        "og:image",
+        "twitter:title",
+        "twitter:card",
+        "twitter:url",
+        "twitter:description",
+        "twitter:image"
+      ]
 
       @config Application.get_all_env(:phoenix_meta_tags)
               |> Enum.into(%{})
@@ -71,7 +83,10 @@ defmodule PhoenixMetaTags.TagView do
       """
       def render_tag_twitter(tags) do
         [
-          tag(:meta, content: get_tags_value(tags, "twitter:card", "twitter:card"), name: "twitter:card"),
+          tag(:meta,
+            content: get_tags_value(tags, "twitter:card", "twitter:card"),
+            name: "twitter:card"
+          ),
           tag(:meta, content: get_tags_value(tags, "url", "twitter:url"), name: "twitter:url"),
           tag(:meta,
             content: get_tags_value(tags, "title", "twitter:title"),

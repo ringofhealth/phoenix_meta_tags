@@ -204,10 +204,10 @@ defmodule PhoenixMetaTagsTest do
         tag(:meta, content: "w200", property: "fb:video:specs:west")
       ]
 
-       assert all_tags -- expected == []
-#      Enum.map(all_tags, fn tag ->
-#        assert tag in expected
-#      end)
+      assert all_tags -- expected == []
+      #      Enum.map(all_tags, fn tag ->
+      #        assert tag in expected
+      #      end)
     end
   end
 end
