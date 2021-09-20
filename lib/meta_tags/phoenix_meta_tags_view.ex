@@ -3,11 +3,11 @@ defmodule PhoenixMetaTags.TagView do
   alias PhoenixMetaTags.MapHelper
 
   @moduledoc """
-  This module render the tags struct to html meta tag.
+  This module render the tags struct to HTML meta tag.
   """
 
-  # OK: override value if runtime tags has the same key, ex: `og:title` will override `title` when render og
-
+  # OK: override value if runtime tags has the same key, ex: `og:title` will
+  # override `title` when render og
   #  @config_read Application.get_all_env(:phoenix_meta_tags)
   #               |> Enum.into(%{})
   #               |> MapHelper.flatMap()

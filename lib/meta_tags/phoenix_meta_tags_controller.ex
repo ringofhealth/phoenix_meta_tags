@@ -1,6 +1,6 @@
 defmodule PhoenixMetaTags.TagController do
   @moduledoc """
-  Documentation for PhoenixMetaTags.
+  Documentation for PhoenixMetaTags.TagController.
   """
 
   defmacro __using__(_) do
