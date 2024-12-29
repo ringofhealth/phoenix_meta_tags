@@ -2,7 +2,7 @@ defmodule PhoenixMetaTags.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/hlongvu/phoenix_meta_tags"
-  @version "0.1.9"
+  @version "0.2.0"
 
   def project do
     [
@@ -25,8 +25,9 @@ defmodule PhoenixMetaTags.MixProject do
 
   defp deps do
     [
-      {:phoenix_html, "~> 2.10 or ~> 3.0"},
+      {:phoenix_html, "~> 4.0"},
       {:plug, "~> 1.7"},
+      {:phoenix_html_helpers, "~> 1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end

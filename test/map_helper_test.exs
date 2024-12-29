@@ -1,7 +1,9 @@
 defmodule MapHelerTest do
   use ExUnit.Case
   alias PhoenixMetaTags.MapHelper
-  use Phoenix.HTML
+  import Phoenix.HTML
+  import Phoenix.HTML.Form
+  use PhoenixHTMLHelpers
 
   test "test map helper" do
     map = %{

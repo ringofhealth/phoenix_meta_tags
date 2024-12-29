@@ -1,5 +1,7 @@
 defmodule PhoenixMetaTags.TagView do
-  use Phoenix.HTML
+  import Phoenix.HTML
+  import Phoenix.HTML.Form
+  use PhoenixHTMLHelpers
   alias PhoenixMetaTags.MapHelper
 
   @moduledoc """
